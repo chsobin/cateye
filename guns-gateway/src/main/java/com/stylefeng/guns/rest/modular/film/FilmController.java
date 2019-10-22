@@ -30,11 +30,11 @@ public class FilmController {
     private static final String IMG_PRE = "http://img.meetingshop.cn/";
 
 
-    @Reference(interfaceClass = FilmServiceApi.class)
+    @Reference(interfaceClass = FilmServiceApi.class, check = false)
     private FilmServiceApi filmServiceApi;
 
     // 异步调用
-    @Reference(interfaceClass = FilmAsyncServiceApi.class, async = true)
+    @Reference(interfaceClass = FilmAsyncServiceApi.class, async = true, check = false)
     private FilmAsyncServiceApi filmAsyncServiceApi;
 
     /**
