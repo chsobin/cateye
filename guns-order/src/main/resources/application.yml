@@ -10,7 +10,7 @@ jwt:
   md5-key: randomKey      #md5加密混淆key
 
 server:
-  port: 8084 #项目端口
+  port: 8085 #项目端口
 
 mybatis-plus:
   mapper-locations: classpath*:com/stylefeng/guns/rest/**/mapping/*.xml
@@ -33,17 +33,28 @@ spring:
       password: 123456
       filters: log4j,wall,mergeStat
   application:
-    name: cateye-cinema
+    name: cateye-order
   dubbo:
     server: true
     registry: zookeeper://localhost:2181
-    protocol:
+    protocal:
       name: dubbo
-      port: 20884
+      port: 20885
 
 
 logging:
   level.root: info
   level.com.stylefeng: debug
   path: logs/
-  file: guns-cinema.log
+  file: guns-order.log
+
+
+ftp:
+  host-name: 47.106.201.229
+  port: 21
+  user-name: chsobin
+  password: 123456
+
+
+
+
